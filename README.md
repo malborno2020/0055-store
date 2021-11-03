@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. Definir una aplicación que permita tener un administrador
+ - CRUD Categories
+ - CRUD Products
+ - CRUD Role
+ - CRUD Users (OPT)
 
-Things you may want to cover:
+2. Mostrar los productos como si fuera un catálogo:
+ - Crear carritos de compras
+ - Crear un pedido desde el cliente
+ - Enviar un correo de confirmación al cliente sobre el pedido realizado
 
-* Ruby version
+3. Administrador pueda manipular los pedidos
 
-* System dependencies
+Iniciar sesión
 
-* Configuration
+ - Pre definido un usuario administrador
+ - Perfil de usuario
+    - Ver mis datos
+    - Editar mis datos
+    - Eliminar mi perfil
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Permitir productos favoritos
+- Medios de pago
