@@ -23,3 +23,16 @@ Iniciar sesión
 
 Permitir productos favoritos
 - Medios de pago
+
+
+Comando crear Modelos
+rails g model category name:string
+rails g model product name:string price:integer description:string category:references
+rails g model cart total:integer
+rails g model CartProduct cart:references product:references quantity:integer
+rails g model status description:string
+rails g model role name:string
+rails g model user username:string password_digest:string role:references
+rails g model order number:string total:integer user:references status:references
+rails g model OrderDetail order:references product:references quantity:integer
+
