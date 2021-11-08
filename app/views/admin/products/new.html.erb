@@ -1,2 +1,5 @@
-<h1>Admin::Products#new</h1>
-<p>Find me in app/views/admin/products/new.html.erb</p>
+<h1>Register a new product</h1>
+
+<%= render "form", base_product: @product, categories: @categories %>
+<%= link_to "Return", admin_products_path %>
+

@@ -31,7 +31,7 @@ Rails.application.routes.draw do
     post 'products',              to: 'products#create'
     put 'products/:id',           to: 'products#update'    
     patch 'products/:id',         to: 'products#update'   
-    delete 'products/edit',       to: 'products#destroy'
+    delete 'products/:id',        to: 'products#destroy'
   
 
   end
