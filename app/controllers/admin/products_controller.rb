@@ -16,7 +16,7 @@ class Admin::ProductsController < ApplicationController
 
   def create
     @product = Product.new(params_product)
-    if @product
+    if @product.save
       redirect_to admin_products_path
     else
       @categories = Category.all
@@ -28,6 +28,7 @@ class Admin::ProductsController < ApplicationController
     if @product.update(params_product)
       redirect_to admin_products_path
     else
+      @categories = Category.all
       render :edit
     end
   end

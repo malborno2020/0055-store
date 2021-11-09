@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'pages/home'
   namespace :admin do
     get 'statuses',               to: 'statuses#index',         as: 'statuses'
     get 'statuses/new',           to: 'statuses#new',           as: 'new_status'
