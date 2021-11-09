@@ -37,7 +37,7 @@ class Admin::RolesController < ApplicationController
   end
 
   def destroy
-    @Role.destroy
+    @role.destroy
     redirect_to admin_roles_path
   end
 

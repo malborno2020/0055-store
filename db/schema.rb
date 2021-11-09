@@ -75,7 +75,7 @@ ActiveRecord::Schema.define(version: 2021_11_04_024628) do
   end
 
   create_table "statuses", force: :cascade do |t|
-    t.string "descripcion"
+    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

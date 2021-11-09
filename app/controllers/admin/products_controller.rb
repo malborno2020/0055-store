@@ -5,6 +5,7 @@ class Admin::ProductsController < ApplicationController
 
   def new
     @product = Product.new
+    @categories = Category.all
   end
 
   def show
@@ -18,6 +19,7 @@ class Admin::ProductsController < ApplicationController
     if @product
       redirect_to admin_products_path
     else
+      @categories = Category.all
       render  :new
     end
   end
