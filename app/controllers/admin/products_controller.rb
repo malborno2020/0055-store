@@ -1,17 +1,22 @@
 class Admin::ProductsController < ApplicationController
+  
+  layout "admin_layout"  
+  before_action :set_product, only: [:show, :edit, :update, :destroy]
+  
   def index
     @products = Product.all
   end
 
   def new
     @product = Product.new
-    @categories = Category.all
+    set_categories
   end
 
   def show
   end
 
   def edit
+    set_categories
   end
 
   def create
@@ -19,7 +24,7 @@ class Admin::ProductsController < ApplicationController
     if @product.save
       redirect_to admin_products_path
     else
-      @categories = Category.all
+      set_categories
       render  :new
     end
   end
@@ -28,7 +33,7 @@ class Admin::ProductsController < ApplicationController
     if @product.update(params_product)
       redirect_to admin_products_path
     else
-      @categories = Category.all
+      set_categories
       render :edit
     end
   end
@@ -45,5 +50,12 @@ class Admin::ProductsController < ApplicationController
 
   def set_product
     @product = Product.find(params[:id])
+  rescue
+    flash[:set_product_error] = "Could not find record #{params[:id]}"
+    redirect_to admin_products_path
+  end
+
+  def set_categories
+    @categories = Category.all
   end
 end

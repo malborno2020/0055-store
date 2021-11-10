@@ -6,6 +6,20 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+
+(1..25).each do |i|
+    Product.create(
+    
+        name: Faker::Commerce.product_name,
+        category: Category.find(rand(1..6)),
+        description: Faker::Lorem.sentence(word_count: 15),
+        price: rand(1000..10000)
+ 
+    )
+end
+puts "Products loaded!"
+
+
 Status.create([
     { description: 'Return initiated' },
     { description: 'Change requested ' },

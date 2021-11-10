@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'pages/home'
+  root 'pages#home'
+
   namespace :admin do
     get 'statuses',               to: 'statuses#index',         as: 'statuses'
     get 'statuses/new',           to: 'statuses#new',           as: 'new_status'
@@ -11,8 +12,8 @@ Rails.application.routes.draw do
     patch 'statuses/:id',         to: 'statuses#update'   
     delete 'statuses/:id',        to: 'statuses#destroy'
 
-  end
-  namespace :admin do
+    
+
     get 'roles',                  to: 'roles#index',         as: 'roles'
     get 'roles/new',              to: 'roles#new',           as: 'new_role'
     get 'roles/:id',              to: 'roles#show',          as: 'role'
@@ -22,8 +23,9 @@ Rails.application.routes.draw do
     put 'roles/:id',              to: 'roles#update'    
     patch 'roles/:id',            to: 'roles#update'   
     delete 'roles/:id',           to: 'roles#destroy'
-  end
-  namespace :admin do
+ 
+
+
     get 'products',               to:'products#index',      as: 'products'
     get 'products/new',           to:'products#new',        as: 'new_product'
     get 'products/:id',           to:'products#show',       as: 'product'
@@ -35,8 +37,7 @@ Rails.application.routes.draw do
     delete 'products/:id',        to: 'products#destroy'
   
 
-  end
-  namespace :admin do
+
     get 'categories',             to: 'categories#index',   as: 'categories'
     get 'categories/new',         to: 'categories#new',     as: 'new_category'
     get 'categories/:id',         to: 'categories#show',    as: 'category'
@@ -46,8 +47,6 @@ Rails.application.routes.draw do
     put 'categories/:id',         to: 'categories#update'    
     patch 'categories/:id',       to: 'categories#update'   
     delete 'categories/:id',      to: 'categories#destroy'
-  
-  
   
   
   end
