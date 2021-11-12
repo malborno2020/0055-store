@@ -10,8 +10,8 @@
                 <% end %>
             </div>
             <div class="col-lg-2 text-center fs-5">
-                <%= link_to "#", class: 'text-decoration-none text-dark' do %>
-                    <i class="fa-solid fa-cart-shopping"></i>
+                 <%= link_to cart_path, class: 'text-decoration-none text-dark btn-cart fs-8' do %>
+                    <i class="bi bi-cart4"></i>
                     <%= @cart.cart_products.count %>
                 <% end %>
             </div>
