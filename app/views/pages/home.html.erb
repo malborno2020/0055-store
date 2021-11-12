@@ -1,6 +1,7 @@
-<h1>Products in cart</h1>
-
-<br>
-<br>
-
-Cart: <%= @cart.cart_products.count %>
+<div class="row">
+    <% @products.each do |p| %>    
+        <div class="col-3 mb-3">
+            <%= render 'product_cart', base_product: p %>
+        </div>
+    <% end %>
+</div>

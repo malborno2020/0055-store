@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
+  
+  # Carts
+  get 'carts/show'
+  post 'carts/:id_product', to: 'carts#add_product',  as: 'add_product_to_cart'
+
+  # Pages
   root 'pages#home'
+  get '/cart', to:  'pages#cart', as: 'cart'
+  
+  
 
   namespace :admin do
     get 'statuses',               to: 'statuses#index',         as: 'statuses'
