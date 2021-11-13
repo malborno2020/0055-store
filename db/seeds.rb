@@ -6,6 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# Save data for Category
+Category.create([
+    { name: 'audio' },
+    { name: 'food' },
+    { name: 'furniture' },
+    { name: 'garden' },
+    { name: 'pharma' },
+    { name: 'telephones' }
+])
+puts "💾 Categories loaded!"
 
 (1..25).each do |i|
     Product.create(
@@ -30,16 +40,7 @@ Status.create([
 
 ])
 puts "💾 Statutes loaded!"
-# Save data for Category
-Category.create([
-    { name: 'audio' },
-    { name: 'food' },
-    { name: 'furniture' },
-    { name: 'garden' },
-    { name: 'pharma' },
-    { name: 'telephones' }
-])
-puts "💾 Categories loaded!"
+
 
 Role.create([
     { name: 'Returns manager' },
