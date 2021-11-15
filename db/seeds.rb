@@ -15,7 +15,7 @@ Category.create([
     { name: 'pharma' },
     { name: 'telephones' }
 ])
-puts "💾 Categories loaded!"
+puts "****** Categories loaded ******!"
 
 (1..25).each do |i|
     Product.create(
@@ -27,7 +27,7 @@ puts "💾 Categories loaded!"
  
     )
 end
-puts "Products loaded!"
+puts " ****** Products loaded ******!"
 
 
 Status.create([
@@ -39,7 +39,7 @@ Status.create([
     { description: 'Return requested' }
 
 ])
-puts "💾 Statutes loaded!"
+puts "****** Statuses loaded ******!"
 
 
 Role.create([
@@ -50,9 +50,9 @@ Role.create([
     { name: 'Supplier' },
     { name: '3PL Partner' }
 ])
-puts "💾 Roles loaded!"
+puts "****** Roles loaded!******"
 
 User.create([
     { username: 'admin', password: 'admin', password_confirmation: 'admin', role: Role.find_by(name: 'Admin') }
 ])
-puts "💾 Users loaded!"
+puts "****** Users loaded!******"
