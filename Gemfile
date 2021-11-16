@@ -56,3 +56,4 @@ gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
 
 gem 'ed25519' 
 gem 'bcrypt_pbkdf'
+gem 'erb_lint', require:  false
