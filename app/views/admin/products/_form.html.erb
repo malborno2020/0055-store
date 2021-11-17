@@ -33,8 +33,7 @@
                     <%= base_product.errors[:description].first %>
                 </div>
             <% end %>
-        </div>
-
+        
         <div class ="mb-3">
             <%= form.label :price, class:   'form-label'%>
             <%= form.text_field   :price, class: 'form-control' %>
@@ -45,10 +44,17 @@
             <% end %>
         </div>
 
+        </div class = "mb-3">
+            <%= form.label :main_photo, class: 'form-label' %>
+            <%= form.file_field :main_photo, class: 'form-control' %>
+        </div>
+
+        </div class = "mb-3">
+            <%= form.label :detail_photos, class: 'form-label' %>
+            <%= form.file_field :detail_photos, multiple: true, class: 'form-control' %>
+        </div>
+
         <%= form.submit class: 'btn btn-primary' %>
     <% end %>
   </div>
 </div>
-
-
-    
